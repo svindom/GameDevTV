@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
-    public float spinSpeed = 0;
+    [SerializeField] float spinSpeed = 0.1f;  // SerializeField allows us to stay private but be able to make adjustments via inspector
+    public float MoveSpeed = 0.01f;
 
-    GameObject _cart;
-    Rigidbody2D _rigidbody;
+    GameObject cart;
+    Rigidbody2D rg;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        rg = GetComponent<Rigidbody2D>();
     }
     void Start()
     {
@@ -20,8 +21,55 @@ public class Driver : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 0, 0.1f);
+        DriveUsingGetAxis();
+        SpeedUp();
+        SpeedDown();
+    }
 
-        transform.Translate(0, 0.01f, 0);
+    void DriveUsingGetAxis()
+    {
+        // GetAxis is a is a library with different movement abilities
+        float horizontalMove = Input.GetAxis("Horizontal") * spinSpeed * Time.deltaTime;
+        float verticalMove = Input.GetAxis("Vertical") * MoveSpeed * Time.deltaTime;
+
+        transform.Rotate(0, 0, -horizontalMove);    // to make an object rotates
+        transform.Translate(0, verticalMove, 0);    // to make an object move straight forward
+    }
+
+    void DriveUsingInspectorOnly()
+    {
+        transform.Rotate(0, 0, spinSpeed);   
+        transform.Translate(0, MoveSpeed, 0);  
+    }
+
+    void DriveUsingGetAxisHorizontalOnly()
+    {
+        float spinAmount = Input.GetAxis("Horizontal") * spinSpeed;
+        transform.Rotate(0, 0, -spinAmount);
+        transform.Translate(0, MoveSpeed, 0);
+    }
+
+
+
+
+
+    void SpeedUp()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            MoveSpeed += 3;
+        }
+    }
+    void SpeedDown()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            MoveSpeed -= 3;
+
+            if (MoveSpeed <= 0)
+            {
+                MoveSpeed = 0;
+            }
+        }
     }
 }
