@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Car
+    uniqueID: 4075521775
+    locked: 0
+  - name: Bridge
+    uniqueID: 2126235227
+    locked: 0

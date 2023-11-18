@@ -57,14 +57,14 @@ public class Driver : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            MoveSpeed += 3;
+            MoveSpeed += 1.5f;
         }
     }
     void SpeedDown()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            MoveSpeed -= 3;
+            MoveSpeed -= 1.5f;
 
             if (MoveSpeed <= 0)
             {
