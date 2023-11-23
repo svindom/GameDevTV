@@ -6655,8 +6655,8 @@ Transform:
   m_GameObject: {fileID: 626401682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2, y: -0.98, z: 0}
-  m_LocalScale: {x: 0.7277, y: 0.7277, z: 0.7277}
+  m_LocalPosition: {x: 2.3017, y: -0.8261, z: 0}
+  m_LocalScale: {x: 0.9821039, y: 0.9821039, z: 0.9821039}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 230912043}
@@ -6697,7 +6697,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.72, y: 1.14}
+    oldSize: {x: 0.8, y: 1.21}
     newSize: {x: 0.72, y: 1.14}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17140,7 +17140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.08, y: 2.31}
+    oldSize: {x: 1.9076923, y: 1.9076923}
     newSize: {x: 2.08, y: 2.31}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17506,7 +17506,7 @@ Transform:
   m_GameObject: {fileID: 1649302873}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.16, y: -3.75, z: 2.380069}
+  m_LocalPosition: {x: -14.146, y: -3.889, z: 2.380069}
   m_LocalScale: {x: 0.376, y: 0.376, z: 0.376}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17548,7 +17548,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.08, y: 2.31}
+    oldSize: {x: 1.9076923, y: 1.9076923}
     newSize: {x: 2.08, y: 2.31}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19076,7 +19076,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.08, y: 2.31}
+    oldSize: {x: 1.9076923, y: 1.9076923}
     newSize: {x: 2.08, y: 2.31}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -20622,7 +20622,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.08, y: 2.31}
+    oldSize: {x: 1.9076923, y: 1.9076923}
     newSize: {x: 2.08, y: 2.31}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
