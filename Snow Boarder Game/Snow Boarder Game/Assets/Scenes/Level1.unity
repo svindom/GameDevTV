@@ -8082,6 +8082,7 @@ GameObject:
   - component: {fileID: 245924959}
   - component: {fileID: 245924958}
   - component: {fileID: 245924962}
+  - component: {fileID: 245924963}
   m_Layer: 0
   m_Name: Raynevan
   m_TagString: Player
@@ -8166,6 +8167,7 @@ Transform:
   m_Children:
   - {fileID: 1596418710}
   - {fileID: 1395616363}
+  - {fileID: 1018533078}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.79}
 --- !u!114 &245924962
@@ -8182,6 +8184,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torqueAmount: 5
   boostSpeed: 21
+--- !u!114 &245924963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245924957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4aeb73bcfee3f24cb45d089eb625746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparks: {fileID: 1018533080}
 --- !u!1 &246940669
 GameObject:
   m_ObjectHideFlags: 0
@@ -28152,7 +28167,6 @@ GameObject:
   m_Component:
   - component: {fileID: 586523371}
   - component: {fileID: 586523370}
-  - component: {fileID: 586523372}
   m_Layer: 0
   m_Name: stalactite_02 colilider
   m_TagString: Untagged
@@ -28227,55 +28241,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 49397895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &586523372
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586523369}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.16, y: 9.69}
-    newSize: {x: 11.16, y: 9.69}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -3.8478103, y: 3.8821886}
-      - {x: -0.21362829, y: 2.501911}
-      - {x: -1.0773667, y: 3.305204}
-      - {x: -3.591469, y: 4.8729625}
-  m_UseDelaunayMesh: 0
 --- !u!1 &591429792
 GameObject:
   m_ObjectHideFlags: 0
@@ -43668,7 +43633,7 @@ GameObject:
   - component: {fileID: 1018533080}
   - component: {fileID: 1018533079}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Mining Cart Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43682,12 +43647,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018533077}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5058989, y: -0.49403074, z: -0.49403074, w: 0.5058989}
-  m_LocalPosition: {x: 0.49, y: -0.57, z: 0}
-  m_LocalScale: {x: 0.82, y: 0.21, z: 0.3}
+  m_LocalRotation: {x: 0.5058989, y: -0.4940307, z: -0.4940307, w: 0.5058989}
+  m_LocalPosition: {x: 0.155, y: -0.297, z: 0}
+  m_LocalScale: {x: 0.26, y: 0.11, z: 0.28}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1395616363}
+  m_Father: {fileID: 245924960}
   m_LocalEulerAnglesHint: {x: 178.64, y: 90, z: 90}
 --- !u!199 &1018533079
 ParticleSystemRenderer:
@@ -43740,7 +43705,7 @@ ParticleSystemRenderer:
   m_VelocityScale: 0
   m_LengthScale: 2
   m_SortingFudge: 0
-  m_NormalDirection: 1
+  m_NormalDirection: 0
   m_ShadowBias: 0
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
@@ -43783,8 +43748,8 @@ ParticleSystem:
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 3
-    scalar: 3
+    minMaxState: 0
+    scalar: 0
     minScalar: 1
     maxCurve:
       serializedVersion: 2
@@ -43951,7 +43916,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.9823609, b: 0.43867922, a: 0.23921569}
+      maxColor: {r: 1, g: 0.9823609, b: 0.43867922, a: 0.7019608}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -44332,7 +44297,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 5
+    maxNumParticles: 29
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -44400,7 +44365,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: -0.23, y: 25.97, z: 1}
+    m_Scale: {x: -0.46, y: 25.97, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -49060,7 +49025,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d62e345055fed264da64cc9cc9020a38, type: 3}
   m_Color: {r: 0.66180134, g: 0.67408323, b: 0.811, a: 1}
   m_FlipX: 0
@@ -53894,8 +53859,7 @@ Transform:
   m_LocalPosition: {x: 0.10099983, y: 0, z: 0}
   m_LocalScale: {x: 0.50271505, y: 0.50271505, z: 0.50271505}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1018533078}
+  m_Children: []
   m_Father: {fileID: 245924960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1395616364
@@ -80254,7 +80218,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2035286031}
   - component: {fileID: 2035286033}
-  - component: {fileID: 2035286032}
   m_Layer: 0
   m_Name: stalactite_02 colilider
   m_TagString: Untagged
@@ -80277,55 +80240,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1698080385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &2035286032
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035286030}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.16, y: 9.69}
-    newSize: {x: 11.16, y: 9.69}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -3.8478103, y: 3.8821886}
-      - {x: -0.21362829, y: 2.501911}
-      - {x: -1.0773667, y: 3.305204}
-      - {x: -3.591469, y: 4.8729625}
-  m_UseDelaunayMesh: 0
 --- !u!212 &2035286033
 SpriteRenderer:
   m_ObjectHideFlags: 0

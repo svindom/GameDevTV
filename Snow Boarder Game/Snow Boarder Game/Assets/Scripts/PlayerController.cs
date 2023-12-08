@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D _raynevan;
     SurfaceEffector2D _surfaceEffector;
 
+
     public float torqueAmount = 1f;
     public float boostSpeed = 20f;
     private float _speed = 14f;
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _surfaceEffector.speed = _speed;
-        }
-        
+        }      
     }
+
 }
